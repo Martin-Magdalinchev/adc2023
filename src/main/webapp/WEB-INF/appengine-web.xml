@@ -8,6 +8,10 @@
     <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
   </system-properties>
 
+  <automatic-scaling>
+	<min-idle-instances>0</min-idle-instances>
+  </automatic-scaling>
+  
   <static-files>
     <include path="/**.html" expiration="1m" /> <!-- 1 minute, normal is 12h or more -->
     <include path="/**.css" expiration="1m" />  <!-- 1 minute, normal is 12h or more -->
