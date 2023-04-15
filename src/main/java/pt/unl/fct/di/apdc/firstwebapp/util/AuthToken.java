@@ -8,6 +8,7 @@ public class AuthToken {
 	
 	public String username;
 	public String tokenID;
+	public String role;
 	public long creationData;
 	public long expirationData;
 	
@@ -15,9 +16,10 @@ public class AuthToken {
 		
 	}
 	
-	public AuthToken(String username) {
+	public AuthToken(String username, String role) {
 		this.username = username;
 		this.tokenID = UUID.randomUUID().toString();
+		this.role = role;
 		this.creationData = System.currentTimeMillis();
 		this.expirationData = this.creationData + AuthToken.EXPIRATION_TIME;
 }
